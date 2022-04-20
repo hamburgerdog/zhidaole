@@ -1,0 +1,95 @@
+{
+  "name": "xjosiah-simple-react-admin",
+  "version": "1.0.0",
+  "description": "xjosiah-simple-react-admin 是一个前端的基本 react模板",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open --config ./config/webpack.dev.js",
+    "dev": "node ./scripts/vite-start.js && vite --config ./config/vite.config.js",
+    "build": "webpack --config ./config/webpack.prod.js",
+    "updateGitHook": "npx simple-git-hooks",
+    "commit": "npx cz",
+    "lint": "npx lint-staged --allow-empty"
+  },
+  "author": "",
+  "license": "ISC",
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "eslint src --ext .js,.jsx  --fix"
+    ],
+    "src/**/*.{css,less,md}": [
+      "prettier --write --config ./.prettierrc.json --ignore-path ./.prettierignore"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/register": "^7.17.7",
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@trivago/prettier-plugin-sort-imports": "^3.2.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react-refresh": "^1.3.6",
+    "antd-dayjs-vite-plugin": "^1.1.4",
+    "babel-loader": "^8.2.4",
+    "babel-plugin-import": "^1.13.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "commitizen": "^4.2.4",
+    "core-js": "^3.21.1",
+    "css-loader": "^6.7.1",
+    "cz-customizable": "^6.3.0",
+    "eslint": "^8.12.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
+    "lint-staged": "^12.3.7",
+    "prettier": "2.6.2",
+    "style-loader": "^3.3.1",
+    "vite": "^2.9.5",
+    "vite-plugin-cesium": "^1.2.16",
+    "vite-plugin-svgr": "^1.1.0",
+    "webpack": "^5.71.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/runtime": "^7.17.9",
+    "@reduxjs/toolkit": "^1.8.1",
+    "antd": "^4.19.5",
+    "classnames": "^2.3.1",
+    "i18next": "^21.6.16",
+    "i18next-browser-languagedetector": "^6.1.4",
+    "lodash": "^4.17.21",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-i18next": "^11.16.6",
+    "react-redux": "^7.2.8",
+    "react-router-dom": "^6.3.0"
+  }
+}

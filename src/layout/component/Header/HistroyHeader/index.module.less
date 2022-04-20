@@ -1,0 +1,43 @@
+@sf-history-select-color: @primary-color;
+
+.historyHeader {
+  height: 36px;
+  background-color: #fafafa;
+  display: flex;
+  box-sizing: content-box;
+  padding: 8px 12px 0px 12px !important;
+
+  .historyItem {
+    margin-right: 8px;
+    cursor: pointer;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    line-height: normal;
+    padding: 4px 16px;
+    color: #aaa;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &.hsItemSelected {
+      color: @sf-history-select-color;
+      font-weight: 500;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      background-color: @layout-body-background;
+    }
+
+    &:hover {
+      color: @sf-history-select-color;
+    }
+
+    .closeIcon {
+      font-size: 14px;
+      margin-left: 8px;
+    }
+  }
+}
