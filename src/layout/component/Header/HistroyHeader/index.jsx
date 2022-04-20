@@ -1,104 +1,53 @@
 import { CloseOutlined } from '@ant-design/icons';
 import { Layout } from 'antd';
 import classNames from 'classnames';
-import { cloneDeep } from 'lodash';
-import React from 'react';
+import React, { memo, useEffect, useMemo } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
-import { RouterConfigList } from '@/router/config';
-import { withRouter } from '@/utils/HoC/withRouter';
-
+import { useNavHistoryMap } from './hook';
 import styles from './index.module.less';
 
 const { Header } = Layout;
 
-class HistoryHeader extends React.PureComponent {
-  constructor() {
-    super();
-    this.state = {
-      navHistoryMap: initNavHistoryMap(),
-    };
-    this.afterChangeRouter = this.afterChangeRouter.bind(this);
-    this.addHistory = this.addHistory.bind(this);
-    this.removeHistory = this.removeHistory.bind(this);
-  }
+const HistoryHeader = memo(() => {
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  componentDidUpdate(prevProps) {
-    const {
-      location: { pathname: prevPath },
-    } = prevProps;
-    const {
-      location: { pathname: curPath, state: curHistory },
-    } = this.props;
-    if (prevPath !== curPath) {
-      this.afterChangeRouter(curPath, curHistory);
-    }
-  }
+  const { navHistoryMap, afterChangeRouter, removeHistory } = useNavHistoryMap();
+  const navHistoryMapKeyList = useMemo(() => [...navHistoryMap.keys()], [navHistoryMap]);
 
-  afterChangeRouter(curPath, curHistory) {
-    const { navHistoryMap } = this.state;
-    if (!navHistoryMap.has(curPath)) {
-      this.addHistory(curPath, curHistory);
-    }
-  }
+  useEffect(() => {
+    afterChangeRouter();
+  }, [location]);
 
-  addHistory = (path, history) => {
-    const curNavHistoryMap = cloneDeep(this.state.navHistoryMap);
-    curNavHistoryMap.set(path, history);
-    this.setState({
-      navHistoryMap: curNavHistoryMap,
-    });
-  };
+  return (
+    <Header className={styles.historyHeader} style={{ padding: 0 }}>
+      {navHistoryMapKeyList.map((key, curIndex) => {
+        const curHistory = navHistoryMap.get(key);
+        const { path } = curHistory;
+        const curItemBeSelected = path === location.pathname;
 
-  removeHistory = (path, nextPath, nextHistory) => {
-    const { navigate } = this.props;
-    const curNavHistoryMap = cloneDeep(this.state.navHistoryMap);
-    curNavHistoryMap.delete(path);
-    this.setState(
-      {
-        navHistoryMap: curNavHistoryMap,
-      },
-      () => {
-        navigate(nextPath, { state: nextHistory });
-      },
-    );
-  };
+        const nextPath = getNextItem(navHistoryMapKeyList, curIndex);
+        const nextHistory = navHistoryMap.get(nextPath);
 
-  render() {
-    const { navHistoryMap } = this.state;
-    const {
-      location: { pathname: curPath },
-      navigate,
-    } = this.props;
-    const navHistoryMapKeyList = [...navHistoryMap.keys()];
-
-    return (
-      <Header className={styles.historyHeader} style={{ padding: 0 }}>
-        {navHistoryMapKeyList.map((key, curIndex) => {
-          const curHistory = navHistoryMap.get(key);
-          const { path } = curHistory;
-          const curItemBeSelected = path === curPath;
-
-          const nextPath = getNextItem(navHistoryMapKeyList, curIndex);
-          const nextHistory = navHistoryMap.get(nextPath);
-
-          return (
-            <HistoryHeaderItem
-              key={path}
-              curHistory={curHistory}
-              curItemBeSelected={curItemBeSelected}
-              handleClick={curHistory => {
-                navigate(curHistory.path, { state: curHistory });
-              }}
-              handleRemove={path => {
-                this.removeHistory(path, nextPath, nextHistory);
-              }}
-            />
-          );
-        })}
-      </Header>
-    );
-  }
-}
+        return (
+          <HistoryHeaderItem
+            key={path}
+            curHistory={curHistory}
+            curItemBeSelected={curItemBeSelected}
+            handleClick={curHistory => {
+              navigate(curHistory.path, { state: curHistory });
+            }}
+            handleRemove={() => {
+              removeHistory(navigate, nextPath, nextHistory);
+              navigate(nextPath, { state: nextHistory });
+            }}
+          />
+        );
+      })}
+    </Header>
+  );
+});
 
 class HistoryHeaderItem extends React.Component {
   render() {
@@ -114,7 +63,13 @@ class HistoryHeaderItem extends React.Component {
       <div className={classNames(itemClassName)} onClick={() => handleClick(curHistory)}>
         <span>{menuName}</span>
         {!unDelable && curItemBeSelected && (
-          <div className={styles.closeIcon} onClick={() => handleRemove(path)}>
+          <div
+            className={styles.closeIcon}
+            onClick={e => {
+              e.stopPropagation();
+              handleRemove(path);
+            }}
+          >
             <CloseOutlined />
           </div>
         )}
@@ -129,19 +84,4 @@ const getNextItem = (list, curIndex) => {
   return list[nextIndex];
 };
 
-const initNavHistoryMap = () => {
-  const path = RouterConfigList[0].path;
-  const isRootPath = path === '/';
-  const routerPath = isRootPath ? path : '/' + path;
-
-  const indexItem = {
-    menuName: RouterConfigList[0].menuName,
-    path: routerPath,
-    unDelable: RouterConfigList[0].unDelable,
-  };
-  const historyMap = new Map();
-  historyMap.set(indexItem.path, indexItem);
-  return historyMap;
-};
-
-export default withRouter(HistoryHeader);
+export default HistoryHeader;

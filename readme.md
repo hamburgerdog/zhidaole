@@ -1,6 +1,6 @@
-# xjosiah-simple-react-admin 模板
+# xjosiah-simple-react-tshook-admin 模板
 
-> 满足基本开发需求的 React 后台管理模板，推荐使用 class 语法进行开发
+> 满足基本开发需求的 React 后台管理模板，推荐使用 hook 和 ts 进行开发
 
 ## 如何使用
 
@@ -89,7 +89,7 @@ src
 
 - 状态管理相关
 
-  - 使用 react-redux 并集成了 redux-toolkit 工具
+  - 使用 recoil 工具
 
 - 工程化相关
 

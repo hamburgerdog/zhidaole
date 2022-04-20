@@ -1,10 +1,9 @@
-import { DeploymentUnitOutlined, HomeFilled, RocketFilled } from '@ant-design/icons';
-import React from 'react';
+import { DashboardFilled, HomeFilled } from '@ant-design/icons';
+import React, { lazy } from 'react';
 
-import Home from '@/pages/Home';
+import { Home } from '@/pages/Home';
 
-const DevTools = React.lazy(() => import('@/pages/DevTools'));
-const TeamConfig = React.lazy(() => import('@/pages/TeamConfig'));
+const Dashboard = lazy(() => import('@/pages/Dashboard'));
 
 export const RouterConfigList = [
   {
@@ -15,15 +14,9 @@ export const RouterConfigList = [
     unDelable: true,
   },
   {
-    menuName: 'Dev Tools',
-    menuIcon: <RocketFilled />,
-    path: 'devTools',
-    element: <DevTools />,
-  },
-  {
-    menuName: 'Team Config',
-    menuIcon: <DeploymentUnitOutlined />,
-    path: 'teamConfig',
-    element: <TeamConfig />,
+    menuName: 'Dashboard',
+    menuIcon: <DashboardFilled />,
+    path: 'dashboard',
+    element: <Dashboard />,
   },
 ];

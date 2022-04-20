@@ -1,7 +1,7 @@
 /**
- * xjosiah-simple-react-admin 的全局入口文件，注册 react 和 redux 
- * 
- * @author smartmore-vimo
+ * xjosiah-simple-react-admin 的全局入口文件，注册 react 和 redux
+ *
+ * @author xjosiah
  * @version v0.1
  */
 
@@ -11,16 +11,13 @@ import './index.css';
 
 import React from 'react';
 import ReactDom from 'react-dom';
-import { Provider } from 'react-redux';
+import { RecoilRoot } from 'recoil';
 
 import App from './App';
-import { stroe } from './store';
 
 ReactDom.render(
-  //  redux-store 注入到 react 根组件实例之中
-  <Provider store={stroe}>
+  <RecoilRoot>
     <App />
-  </Provider>,
-  //  react 和 html 中的 #id==='root' 的标签相连接
+  </RecoilRoot>,
   document.getElementById('root'),
 );

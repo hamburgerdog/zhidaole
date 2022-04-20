@@ -4,7 +4,7 @@ import React, { memo } from 'react';
 
 import HistroyHeader from './component/Header/HistroyHeader';
 import LanguaueSelector from './component/Header/LanguaueSelector';
-import UserItem from './component/Header/UserItem';
+import { UserItem } from './component/Header/UserItem';
 import styles from './index.module.less';
 
 const { Header } = Layout;
@@ -12,9 +12,7 @@ const { Header } = Layout;
 /**
  * 头部的配置
  */
-const LayoutHeader = memo(props => {
-  const { collapsed, toggle } = props;
-
+const LayoutHeader = memo(({ collapsed, toggle }) => {
   return (
     <>
       <Header className={styles.siteLayout} style={{ padding: 0 }}>
