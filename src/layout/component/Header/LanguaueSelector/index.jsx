@@ -13,14 +13,14 @@ const selectorConfigList = [
     label: '简体中文',
     value: 'cn',
   },
-  {
-    label: 'English',
-    value: 'en',
-  },
-  {
-    label: '繁体中文',
-    value: 'hk',
-  },
+  // {
+  //   label: 'English',
+  //   value: 'en',
+  // },
+  // {
+  //   label: '繁体中文',
+  //   value: 'hk',
+  // },
 ];
 /**
  * 语言选择器

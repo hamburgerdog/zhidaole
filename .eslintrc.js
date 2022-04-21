@@ -28,8 +28,8 @@ module.exports = {
     'comma-style': [2, 'last'],
 
     //  限制嵌套的深度
-    'max-depth': [2, 1],
-    'max-nested-callbacks': [2, { max: 2 }],
+    'max-depth': [2, 3],
+    'max-nested-callbacks': [2, { max: 3 }],
     //  强制函数最大行数
     'max-lines-per-function': ['error', { max: 100, skipBlankLines: true, skipComments: true }],
 
