@@ -1,6 +1,8 @@
 import { Button, Space, Table } from 'antd';
 import React, { memo, useCallback, useMemo, useState } from 'react';
 
+import ButtonWithConfirm from '@/components/ButtonWithConfirm';
+
 import styles from './index.module.less';
 
 const columns = [
@@ -32,8 +34,13 @@ const columns = [
     fixed: 'right',
     render: () => (
       <Space size="middle">
-        <Button type="link">详情</Button>
-        <Button type="link">删除</Button>
+        <Button type="link">查看详情</Button>
+        <ButtonWithConfirm
+          name="删除"
+          type="link"
+          title="请确认是否删除该名用户？"
+          handleConfirm={() => {}}
+        />
       </Space>
     ),
   },

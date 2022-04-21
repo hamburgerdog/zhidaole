@@ -1,5 +1,6 @@
 import { notification } from 'antd';
 import React, { memo, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import useUser from '@/hooks/useUser';
 import { NOTIFICATION_DURATION } from '@/utils/common';
@@ -12,6 +13,7 @@ import LoginModal from './LoginModal';
  */
 
 export const UserItem = memo(() => {
+  const navigate = useNavigate();
   const [user, { userLogin }] = useUser();
   const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -32,6 +34,7 @@ export const UserItem = memo(() => {
         userLogin(username);
         localStorage.setItem('token', 'admin');
         setIsModalVisible(false);
+        navigate('/');
       } else {
         notification.error({
           message: '登录失败',

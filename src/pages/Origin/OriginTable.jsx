@@ -1,5 +1,7 @@
-import { Button, Space, Table } from 'antd';
+import { Space, Table } from 'antd';
 import React, { memo, useCallback, useMemo, useState } from 'react';
+
+import ButtonWithConfirm from '@/components/ButtonWithConfirm';
 
 import styles from './index.module.less';
 
@@ -32,8 +34,18 @@ const columns = [
     fixed: 'right',
     render: () => (
       <Space size="middle">
-        <Button type="link">暂停发布</Button>
-        <Button type="link">删除</Button>
+        <ButtonWithConfirm
+          name="暂停权限"
+          type="link"
+          title="请确认是否暂停数据源的当前权限?"
+          handleConfirm={() => {}}
+        />
+        <ButtonWithConfirm
+          name="删除"
+          type="link"
+          title="请确认是否该数据源？删除该数据源会导致该源下所有信息被清空"
+          handleConfirm={() => {}}
+        />
       </Space>
     ),
   },

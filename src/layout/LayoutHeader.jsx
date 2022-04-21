@@ -2,9 +2,9 @@ import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
 import { Layout } from 'antd';
 import React, { memo } from 'react';
 
-import HistroyHeader from './component/Header/HistroyHeader';
-import LanguaueSelector from './component/Header/LanguaueSelector';
-import { UserItem } from './component/Header/UserItem';
+import HistroyHeader from '../components/HistroyHeader';
+import LanguaueSelector from '../components/LanguaueSelector';
+import { UserItem } from '../components/UserItem';
 import styles from './index.module.less';
 
 const { Header } = Layout;
