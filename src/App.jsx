@@ -8,7 +8,9 @@ const App = memo(() => {
   return (
     <HashRouter>
       <SimpleLayout>
-        <AppContentRouter />
+        <div style={{ padding: 8 }}>
+          <AppContentRouter />
+        </div>
       </SimpleLayout>
     </HashRouter>
   );

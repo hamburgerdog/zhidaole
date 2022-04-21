@@ -16,7 +16,7 @@
 // box-shadow-base: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05); // 浮层阴影
 
 module.exports = {
-  'primary-color': '#593c65',
+  'primary-color': '#234d74',
   'layout-header-height': '56px',
   'layout-header-background': '#161827',
   'layout-body-background': '#f0f2f5',

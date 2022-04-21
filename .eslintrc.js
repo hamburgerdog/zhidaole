@@ -31,7 +31,7 @@ module.exports = {
     'max-depth': [2, 1],
     'max-nested-callbacks': [2, { max: 2 }],
     //  强制函数最大行数
-    'max-lines-per-function': ['error', { max: 50, skipBlankLines: true, skipComments: true }],
+    'max-lines-per-function': ['error', { max: 100, skipBlankLines: true, skipComments: true }],
 
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',

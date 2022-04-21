@@ -6,7 +6,7 @@ import { LayoutContent } from './LayoutContent';
 import LayoutSider from './LayoutSider';
 
 export const SimpleLayout = memo(({ children }) => {
-  const [collapsed, setCollapsed] = useState(true);
+  const [collapsed, setCollapsed] = useState(false);
 
   const toggle = useCallback(() => {
     setCollapsed(!collapsed);
