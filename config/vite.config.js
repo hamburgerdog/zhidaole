@@ -50,7 +50,11 @@ export default defineConfig({
       '/admin': {
         target: 'http://localhost',
         changeOrigin: true,
-      }
+      },
+      '/origin': {
+        target: 'http://localhost',
+        changeOrigin: true,
+      },
     }
   },
 });

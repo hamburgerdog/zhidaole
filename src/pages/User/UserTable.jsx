@@ -1,9 +1,10 @@
-import { Button, Space, Table } from 'antd';
+import { Space, Table } from 'antd';
 import React, { memo, useCallback, useMemo, useState } from 'react';
 
 import ButtonWithConfirm from '@/components/ButtonWithConfirm';
 
 import styles from './index.module.less';
+import ShowDetailButton from './ShowDetailButton';
 
 const columns = [
   {
@@ -32,9 +33,14 @@ const columns = [
     key: 'action',
     width: 140,
     fixed: 'right',
-    render: () => (
+    render: (_, { name, pubReleaseList, subReleaseList }) => (
       <Space size="middle">
-        <Button type="link">查看详情</Button>
+        <ShowDetailButton
+          title={name}
+          buttonName="查看详情"
+          pubIDList={pubReleaseList}
+          subIDList={subReleaseList}
+        />
         <ButtonWithConfirm
           name="删除"
           type="link"
