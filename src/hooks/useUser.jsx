@@ -13,7 +13,7 @@ const useUser = () => {
     [user],
   );
 
-  return { user, userLogin };
+  return [user, { userLogin }];
 };
 
 export default useUser;

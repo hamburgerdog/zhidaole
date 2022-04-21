@@ -1,15 +1,21 @@
-import { DashboardFilled, HomeFilled, UserOutlined } from '@ant-design/icons';
+import {
+  DashboardOutlined,
+  HomeOutlined,
+  MessageOutlined,
+  UserOutlined,
+} from '@ant-design/icons';
 import React, { lazy } from 'react';
 
 import { Home } from '@/pages/Home';
 
 const User = lazy(() => import('@/pages/User'));
 const Origin = lazy(() => import('@/pages/Origin'));
+const Message = lazy(() => import('@/pages/Message'));
 
 export const RouterConfigList = [
   {
     menuName: '知到啦',
-    menuIcon: <HomeFilled />,
+    menuIcon: <HomeOutlined />,
     path: '/',
     element: <Home />,
     unDelable: true,
@@ -22,8 +28,14 @@ export const RouterConfigList = [
   },
   {
     menuName: '消息源管理',
-    menuIcon: <DashboardFilled />,
+    menuIcon: <DashboardOutlined />,
     path: 'origin',
     element: <Origin />,
+  },
+  {
+    menuName: '通知管理',
+    menuIcon: <MessageOutlined />,
+    path: 'message',
+    element: <Message />,
   },
 ];

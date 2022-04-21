@@ -11,7 +11,7 @@ import LoginModal from './LoginModal';
  */
 
 export const UserItem = memo(() => {
-  const { user, userLogin } = useUser();
+  const [user, { userLogin }] = useUser();
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const showModal = () => {
@@ -28,7 +28,7 @@ export const UserItem = memo(() => {
           description: '当前使用测试账号登录',
         });
         userLogin(username);
-        localStorage.setItem('token', 'xjosiah');
+        localStorage.setItem('token', 'admin');
         setIsModalVisible(false);
       } else {
         notification.error({
