@@ -1,4 +1,6 @@
-const { merge } = require('webpack-merge');
+const {
+  merge
+} = require('webpack-merge');
 const path = require('path');
 const common = require('./webpack.common.js');
 
@@ -10,6 +12,16 @@ module.exports = merge(common, {
     port: 8080,
     historyApiFallback: true,
     open: true,
+    proxy: {
+      '/admin': {
+        target: 'http://localhost',
+        changeOrigin: true,
+      },
+      '/origin': {
+        target: 'http://localhost',
+        changeOrigin: true,
+      },
+    }
   },
   output: {
     filename: '[name].bundle.js',
