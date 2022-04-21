@@ -1,4 +1,4 @@
-import { Table } from 'antd';
+import { Button, Space, Table } from 'antd';
 import React, { memo, useCallback, useMemo, useState } from 'react';
 
 import styles from './index.module.less';
@@ -10,25 +10,36 @@ const columns = [
   },
   {
     title: '用户ID',
-    dataIndex: 'age',
+    dataIndex: 'userID',
   },
   {
-    title: '通讯方式',
-    dataIndex: 'address',
+    title: '订阅消息源数量',
+    dataIndex: 'subReleaseAmout',
+  },
+  {
+    title: '创建消息源数量',
+    dataIndex: 'pubReleaseAmout',
+  },
+  {
+    title: '电子邮件',
+    dataIndex: 'email',
+  },
+  {
+    title: '操作',
+    align: 'center',
+    key: 'action',
+    width: 140,
+    fixed: 'right',
+    render: () => (
+      <Space size="middle">
+        <Button type="link">详情</Button>
+        <Button type="link">删除</Button>
+      </Space>
+    ),
   },
 ];
 
-const data = [];
-for (let i = 0; i < 46; i++) {
-  data.push({
-    key: i,
-    name: `Edward King ${i}`,
-    age: 32,
-    address: `London, Park Lane no. ${i}`,
-  });
-}
-
-const UserTable = memo(() => {
+const UserTable = memo(({ data }) => {
   const [selectedRowKeys, setSelectedRowKeys] = useState([]);
 
   const onSelectChange = useCallback(

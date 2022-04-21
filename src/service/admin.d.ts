@@ -24,15 +24,9 @@ declare function getRelease(): {
 };
 
 declare function getUser(): {
-  messageID: string;
-  connect: string;
-  endTime: string;
-  imgPathList: string[];
-  location: { id: string, title: string, address: string, lat: string, lng: string; };
-  msgDetail: string;
-  msgTitle: string;
-  releaseSourceID: string;
-  startTime: string;
-  subTitle: string;
-  tips: string;
+  Email: string;
+  UserID: string;
+  UserName: string;
+  OwnReleaseMessageIDList: string[];
+  SubscribedSourcesIDList: string[];
 };

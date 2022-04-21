@@ -2,6 +2,7 @@ import { notification } from 'antd';
 import React, { memo, useState } from 'react';
 
 import useUser from '@/hooks/useUser';
+import { NOTIFICATION_DURATION } from '@/utils/common';
 
 import styles from './index.module.less';
 import LoginModal from './LoginModal';
@@ -26,6 +27,7 @@ export const UserItem = memo(() => {
         notification.success({
           message: '登录成功',
           description: '当前使用测试账号登录',
+          duration: NOTIFICATION_DURATION,
         });
         userLogin(username);
         localStorage.setItem('token', 'admin');
@@ -34,6 +36,7 @@ export const UserItem = memo(() => {
         notification.error({
           message: '登录失败',
           description: '当前环境请使用测试账号登录，请重新输入账号密码',
+          duration: NOTIFICATION_DURATION,
         });
       }
     } catch (e) {

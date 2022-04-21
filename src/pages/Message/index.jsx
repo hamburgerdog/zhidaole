@@ -3,6 +3,7 @@ import React, { memo, useCallback, useEffect, useState } from 'react';
 
 import useUser from '@/hooks/useUser';
 import { getMessage } from '@/service/admin';
+import { NOTIFICATION_DURATION } from '@/utils/common';
 
 import MessageTable from './MessageTable';
 
@@ -37,10 +38,12 @@ const Message = memo(() => {
       setMessageList(mapDataToColumns(copyMoreList));
       notification.success({
         message: '查询数据成功',
+        duration: NOTIFICATION_DURATION,
       });
     } else {
       notification.error({
         message: '未找到用户的登录凭证！',
+        duration: NOTIFICATION_DURATION,
         description: '若当前用户已登陆请重新登录',
       });
     }
