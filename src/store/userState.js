@@ -3,7 +3,7 @@ import {
 } from 'recoil';
 
 const initialState = {
-  name: 'admin',
+  name: 'No User',
   avatar: 'https://avatars.githubusercontent.com/u/100409110?v=4',
 };
 

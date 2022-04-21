@@ -1,4 +1,4 @@
-import { Space, Table } from 'antd';
+import { Space, Table, Typography } from 'antd';
 import React, { memo, useCallback, useMemo, useState } from 'react';
 
 import ButtonWithConfirm from '@/components/ButtonWithConfirm';
@@ -18,10 +18,18 @@ const columns = [
   {
     title: '订阅消息源数量',
     dataIndex: 'subReleaseAmout',
+    align: 'center',
+    render: text => {
+      return <Typography.Link type="success">{text}</Typography.Link>;
+    },
   },
   {
     title: '创建消息源数量',
     dataIndex: 'pubReleaseAmout',
+    align: 'center',
+    render: text => {
+      return <Typography.Link type="success">{text}</Typography.Link>;
+    },
   },
   {
     title: '电子邮件',
