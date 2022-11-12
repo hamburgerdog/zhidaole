@@ -1,0 +1,146 @@
+[
+  {
+    "lowSourceIDs": [],
+    "midSourceIDs": [],
+    "highSourceIDs": [],
+    "lowMessageIDs": [],
+    "midMessageIDs": [],
+    "highMessageIDs": []
+  },
+  {
+    "lowSourceIDs": [],
+    "midSourceIDs": [],
+    "highSourceIDs": [],
+    "lowMessageIDs": [],
+    "midMessageIDs": [],
+    "highMessageIDs": []
+  },
+  {
+    "lowSourceIDs": [],
+    "midSourceIDs": [],
+    "highSourceIDs": [],
+    "lowMessageIDs": [],
+    "midMessageIDs": [],
+    "highMessageIDs": []
+  },
+  {
+    "lowSourceIDs": [],
+    "midSourceIDs": [],
+    "highSourceIDs": [],
+    "lowMessageIDs": [],
+    "midMessageIDs": [],
+    "highMessageIDs": []
+  },
+  {
+    "lowSourceIDs": [],
+    "midSourceIDs": [],
+    "highSourceIDs": [],
+    "lowMessageIDs": [],
+    "midMessageIDs": [],
+    "highMessageIDs": []
+  },
+  {
+    "lowSourceIDs": [],
+    "midSourceIDs": [],
+    "highSourceIDs": [],
+    "lowMessageIDs": [],
+    "midMessageIDs": [],
+    "highMessageIDs": []
+  },
+  {
+    "lowSourceIDs": [],
+    "midSourceIDs": [],
+    "highSourceIDs": [],
+    "lowMessageIDs": [],
+    "midMessageIDs": [],
+    "highMessageIDs": []
+  },
+  {
+    "lowSourceIDs": [],
+    "midSourceIDs": [],
+    "highSourceIDs": [],
+    "lowMessageIDs": [],
+    "midMessageIDs": [],
+    "highMessageIDs": []
+  },
+  {
+    "lowSourceIDs": [],
+    "midSourceIDs": [],
+    "highSourceIDs": [],
+    "lowMessageIDs": [],
+    "midMessageIDs": [],
+    "highMessageIDs": []
+  },
+  {
+    "lowSourceIDs": [],
+    "midSourceIDs": [],
+    "highSourceIDs": [],
+    "lowMessageIDs": [],
+    "midMessageIDs": [],
+    "highMessageIDs": []
+  },
+  {
+    "lowSourceIDs": [],
+    "midSourceIDs": [],
+    "highSourceIDs": [],
+    "lowMessageIDs": [],
+    "midMessageIDs": [],
+    "highMessageIDs": []
+  },
+  {
+    "lowSourceIDs": [],
+    "midSourceIDs": [],
+    "highSourceIDs": [],
+    "lowMessageIDs": [],
+    "midMessageIDs": [],
+    "highMessageIDs": []
+  },
+  {
+    "lowSourceIDs": [],
+    "midSourceIDs": [],
+    "highSourceIDs": [],
+    "lowMessageIDs": [],
+    "midMessageIDs": [],
+    "highMessageIDs": []
+  },
+  {
+    "lowSourceIDs": [],
+    "midSourceIDs": [],
+    "highSourceIDs": [],
+    "lowMessageIDs": [],
+    "midMessageIDs": [],
+    "highMessageIDs": []
+  },
+  {
+    "lowSourceIDs": [],
+    "midSourceIDs": [],
+    "highSourceIDs": [],
+    "lowMessageIDs": [],
+    "midMessageIDs": [],
+    "highMessageIDs": []
+  }
+]
+{
+  $jsonSchema: {
+    properties: {
+      lowMessageIDs: {
+        bsonType: 'array'
+      },
+      midMessageIDs: {
+        bsonType: 'array'
+      },
+      highMessageIDs: {
+        bsonType: 'array'
+      },
+      lowSourceIDs: {
+        bsonType: 'array'
+      },
+      midSourceIDs: {
+        bsonType: 'array'
+      },
+      highSourceIDs: {
+        bsonType: 'array'
+      }
+    }
+  }
+}

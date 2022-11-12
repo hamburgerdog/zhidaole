@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "rootDir": "src",
+        "baseUrl": ".",
+        "checkJs": false,
+        "allowJs": true,
+        "paths": {
+            "@/*": [
+                "src/*"
+            ],
+        }
+    },
+    "exclude": [
+        "node_modules",
+        "dist"
+    ],
+    "include": [
+        "src",
+        "config/vite.config.js"
+    ]
+}

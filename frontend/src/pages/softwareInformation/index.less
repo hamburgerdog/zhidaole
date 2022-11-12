@@ -1,0 +1,101 @@
+@mainColor: #234d74;
+@contentColor: #4286c5;
+@btnShadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+
+.fullPageX {
+  padding: 180px 72px;
+  box-sizing: border-box;
+
+  .packBackBtn {
+    top: 218px;
+    left: 22px;
+  }
+}
+
+.header {
+  display: flex;
+  margin-bottom: 48px;
+  justify-content: space-between;
+  align-items: center;
+
+  .info {
+    color: @mainColor;
+    font-weight: bold;
+
+    .iTitle {
+      overflow: hidden;
+      flex-basis: 268px;
+      width: 268px;
+      font-size: 72px;
+      letter-spacing: 24px;
+      border-bottom: 8px solid @mainColor;
+      white-space: nowrap;
+      margin-bottom: 24px;
+    }
+
+    .iAuthor {
+      font-size: 48px;
+    }
+
+    .iGithub {
+      font-size: 32px;
+      text-decoration: underline;
+    }
+  }
+
+  .iPhoto {
+    height: 220px;
+    width: 220px;
+    overflow: hidden;
+    border-radius: 100%;
+    border: 8px solid @mainColor;
+    background-color: #fff;
+
+    image {
+      height: inherit;
+      width: inherit;
+      transform: scale(1.03);
+    }
+  }
+}
+
+.main {
+  color: @contentColor;
+  font-weight: 500;
+  font-size: 36px;
+
+  & > view {
+    margin-bottom: 72px;
+  }
+}
+
+.foot {
+  color: @mainColor;
+  font-weight: 500;
+
+  .footTitle {
+    margin-bottom: 16px;
+  }
+
+  .footIconBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .footIcon {
+      margin-bottom: 16px;
+      width: 100px;
+      height: 100px;
+      border-radius: 16px;
+      border: 8px solid @mainColor;
+      background: #fff;
+      overflow: hidden;
+
+      image {
+        width: inherit;
+        height: inherit;
+        transform: scale(1.03);
+      }
+    }
+  }
+}

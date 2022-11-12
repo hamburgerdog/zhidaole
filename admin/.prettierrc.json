@@ -1,0 +1,16 @@
+{
+  "eslintIntegration": true,
+  "stylelintIntegration": true,
+  "singleQuote": true,
+  "semi": true,
+  "insertPragma": false,
+  "printWidth": 100,
+  "proseWrap": "never",
+  "trailingComma": "all",
+  "arrowParens": "avoid",
+
+  "importOrder": ["^@/(.*)$", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "importOrderCaseInsensitive": true
+}

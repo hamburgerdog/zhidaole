@@ -1,0 +1,80 @@
+@hiddenHeight: 80px;
+
+.publishX {
+  .headerX {
+    margin-bottom: -@hiddenHeight;
+  }
+
+  .mainX {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 400px - @hiddenHeight);
+    padding: 28rpx 48rpx 116rpx 48rpx;
+  }
+}
+
+.pubCardX {
+  display: flex;
+  background: #ffffff;
+  box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 24px;
+  padding: 36px 24px;
+  margin-bottom: 24px;
+}
+
+.sourceInfoX {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 250px;
+
+  .infoPicX {
+    width: 128px;
+    height: 128px;
+    border: 4px solid #234d74;
+    overflow: hidden;
+    border-radius: 100%;
+
+    .infoPic {
+      width: inherit;
+      height: inherit;
+    }
+  }
+
+  .infoX {
+    color: #bababa;
+    text-align: center;
+    font-size: 32px;
+
+    padding: 16px 24px;
+    box-sizing: border-box;
+  }
+}
+
+.msgListX {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .msgListTitleX {
+    overflow: hidden;
+    margin-bottom: 16px;
+    color: #234d74;
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  .msgContentX {
+    background-color: #fafafa;
+    padding: 16px;
+    color: #50abfe;
+    font-size: 16px;
+    border-radius: 24px;
+
+    .msgX {
+      font-weight: 300;
+      padding: 4px 0;
+    }
+  }
+}

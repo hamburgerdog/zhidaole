@@ -1,0 +1,237 @@
+@mainColor: #234d74;
+@lightColor: #4286c5;
+@titleFontSize: 36px;
+@normalFontSize: 32px;
+
+.headerX {
+  padding-right: 0px;
+  height: 300px !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .backIconX {
+    position: absolute;
+    left: 48px;
+  }
+
+  .headerText {
+    font-size: 56px;
+    color: @mainColor;
+    font-weight: 500;
+  }
+}
+
+.mainX {
+  min-height: calc(100vh - 300px) !important;
+  transform: translateY(-40px);
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  display: flex;
+  flex-direction: column;
+
+  .searchCardX {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    .searchWrapX {
+      .searchLabel {
+        color: @mainColor;
+        font-size: @titleFontSize;
+        font-weight: 500;
+      }
+      .searchX {
+        border-radius: @normalFontSize;
+        margin-top: 24px;
+
+        input {
+          display: flex;
+          align-items: center;
+          padding: 8px 160px;
+          height: 80px;
+          background: #fff;
+          border: 4px solid @mainColor;
+          border-radius: 32px;
+          box-sizing: border-box;
+        }
+      }
+    }
+
+    .contentX {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: row;
+      padding: 52px 0;
+
+      .uploadAside {
+        flex: 1;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+
+        .uploadTitle {
+          color: @mainColor;
+          font-size: @normalFontSize;
+          font-weight: 500;
+          margin-bottom: 32px;
+        }
+
+        .uploadBtn {
+          height: 160px;
+          width: 160px;
+          border: 4px solid @mainColor;
+          box-sizing: border-box;
+          border-radius: 24px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 72px;
+          color: #00000030;
+
+          image {
+            width: inherit;
+            height: inherit;
+          }
+        }
+
+        .moreLine {
+          justify-items: center;
+          width: 0;
+          flex-grow: 1;
+          box-sizing: border-box;
+          width: 34%;
+          margin: 20px 0px;
+          border-right: 4px dashed @mainColor;
+        }
+      }
+
+      .searchResult {
+        flex: 2;
+        box-sizing: border-box;
+        border: 4px solid @mainColor;
+        border-radius: @titleFontSize;
+        border-right: 0;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        margin-right: -48px;
+        padding: 24px 0;
+        overflow-y: auto;
+        max-height: 700px;
+
+        .resultItem {
+          float: right;
+
+          margin: 24px;
+          margin-right: 0;
+          padding: 16px 32px;
+
+          height: 80px;
+          width: 90%;
+          box-sizing: border-box;
+          color: @lightColor;
+          font-size: @normalFontSize;
+
+          background: #fafafa;
+          box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1);
+          border-radius: 24px 0px 0px 24px;
+
+          &::after {
+            content: "";
+            clear: both;
+          }
+        }
+      }
+    }
+  }
+
+  .resultCardX {
+    flex-shrink: 0;
+    flex-basis: 360px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+
+    border: 4px solid @mainColor;
+    box-sizing: border-box;
+    border-radius: 24px;
+
+    .infoWrapX {
+      display: flex;
+      padding: 40px;
+      box-sizing: border-box;
+      justify-content: space-between;
+
+      .cardInfo {
+        color: @mainColor;
+        font-size: 28px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .cardTextBox {
+          display: flex;
+
+          .cardLabel {
+            width: 140px;
+            text-align: justify;
+
+            &::after {
+              content: ":";
+            }
+          }
+
+          .cardText {
+            width: 220px;
+            white-space: nowrap;
+            overflow: auto;
+          }
+        }
+      }
+
+      .cardPic {
+        margin-left: 16px;
+        height: 176px;
+        width: 176px;
+        border-radius: 100%;
+        border: 2px solid @lightColor;
+        overflow: hidden;
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+
+        image {
+          width: inherit;
+          height: inherit;
+        }
+      }
+    }
+
+    .cardBtnX {
+      float: right;
+      display: flex;
+      margin-right: 24px;
+
+      view {
+        margin-right: 24px;
+        font-size: @normalFontSize;
+      }
+
+      .cancelBtn {
+        border: 2px solid @mainColor;
+        color: @mainColor;
+        border-radius: 16px;
+        padding: 16px;
+        box-sizing: border-box;
+      }
+
+      .confirmBtn {
+        background-color: @mainColor;
+        border-radius: 16px;
+        padding: 20px;
+        color: #fff;
+      }
+
+      &::after {
+        clear: both;
+      }
+    }
+  }
+}

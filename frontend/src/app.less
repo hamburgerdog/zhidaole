@@ -1,0 +1,82 @@
+@bgImageUrl: url(https://s1.ax1x.com/2022/04/12/LeDF0A.png);
+
+page {
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+}
+
+.homeX,
+.settingX {
+  .headerX {
+    height: 688px;
+    margin-bottom: -32px;
+    background-image: @bgImageUrl;
+  }
+
+  .mainX {
+    min-height: calc(100vh - 688px - 32px);
+    background-color: #fafafa;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+  }
+}
+
+.publishX,
+.subscribeX,
+.commonPageX {
+  .headerX {
+    overflow: hidden;
+    height: 400px;
+    padding: 0 52rpx;
+    margin-bottom: -32px;
+    background-image: @bgImageUrl;
+  }
+
+  .headerX .titleX {
+    margin-top: 80px;
+  }
+
+  .mainX {
+    padding: 24px 48px 88px 48px;
+    min-height: calc(100vh - 400px - 32px);
+    background-color: #fafafa;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+
+    .emptyCard {
+      flex-grow: 1;
+      height: inherit;
+      min-height: inherit;
+      max-height: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.numUnderline {
+  text-decoration: underline;
+  margin: 0 6px;
+}
+
+.textEll {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.fullPageX {
+  background-image: @bgImageUrl;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+
+  .packBackBtn {
+    position: absolute;
+    top: 120px;
+    left: 40px;
+  }
+}

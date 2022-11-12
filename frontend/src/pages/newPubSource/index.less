@@ -1,0 +1,130 @@
+@mainColor: #234d74;
+@lightColor: #4286c5;
+@titleFontSize: 36px;
+@normalFontSize: 32px;
+@timeLineSplit: 48px;
+
+.headerX {
+  padding-right: 0px;
+  height: 300px !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .backIconX {
+    position: absolute;
+    left: 48px;
+  }
+
+  .headerText {
+    font-size: 56px;
+    color: @mainColor;
+    font-weight: 500;
+  }
+}
+
+.mainX {
+  min-height: calc(100vh - 300px) !important;
+  transform: translateY(-40px);
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+
+  .timeLine {
+    margin-top: 60px;
+    padding-left: @timeLineSplit;
+    position: relative;
+
+    .tlTitle {
+      color: @mainColor;
+      font-size: @titleFontSize;
+      font-weight: 500;
+      line-height: 72px;
+
+      &::before {
+        content: "●";
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: @mainColor;
+        height: 24px;
+        width: 24px;
+        border-radius: 100%;
+        transform: translate(-@timeLineSplit, 24px);
+      }
+
+      &::after {
+        content: ":";
+      }
+    }
+    .tlContent {
+      color: @mainColor;
+      font-size: @normalFontSize;
+      line-height: 80px;
+      border-bottom: 4px dashed @mainColor;
+    }
+
+    .tlTextBtn {
+      cursor: pointer;
+      color: #00000030;
+      font-size: @normalFontSize;
+      line-height: 80px;
+
+      text {
+        margin-right: 68px;
+        font-size: @normalFontSize;
+
+        &.highLight {
+          color: @mainColor;
+        }
+      }
+    }
+
+    .tlImages {
+      display: flex;
+      flex-direction: row;
+      height: 160px;
+      width: 90%;
+      padding: 12px 0;
+
+      .round {
+        border-radius: 100%;
+      }
+
+      view {
+        height: inherit;
+        background-color: #fff;
+        border-radius: 24px;
+        overflow: hidden;
+        border: 4px solid @mainColor;
+        filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.1));
+        margin-right: 24px;
+      }
+
+      image {
+        height: inherit;
+        width: 160px;
+      }
+    }
+  }
+
+  .timeLine::before {
+    content: "";
+    position: absolute;
+    background-color: @mainColor;
+    height: 80%;
+    width: 4px;
+    transform: translate(-@timeLineSplit + 10px, 58px);
+  }
+
+  .lastTimeLine::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 80%;
+    background-color: rgba(0, 0, 0, 0);
+    border-right: 4px dashed @mainColor;
+    transform: translate(-@timeLineSplit + 10px, 58px);
+  }
+}

@@ -1,0 +1,111 @@
+@mainColor: #234d74;
+@lightColor: #50abfe;
+
+.fullPageX {
+  box-sizing: border-box;
+  padding: 160px 0 0 100px;
+
+  .packBackBtn {
+    top: 250rpx;
+  }
+}
+
+.infoListBox {
+  & > view {
+    margin-bottom: 48px;
+  }
+}
+
+.userPic {
+  height: 200px;
+  width: 200px;
+
+  & > image {
+    border: 8px solid @mainColor;
+    border-radius: 100%;
+    width: inherit;
+    height: inherit;
+  }
+}
+
+.userTextX {
+  color: @mainColor;
+  font-size: 42px;
+  font-weight: 500;
+
+  & > text::after {
+    content: ")";
+    color: @lightColor;
+    font-size: 38px;
+  }
+}
+
+.userName {
+  font-size: 48px;
+
+  &::before {
+    content: "name(";
+    color: @lightColor;
+    font-size: 38px;
+  }
+}
+
+.userID {
+  &::before {
+    content: "__ID(";
+    color: @lightColor;
+    font-size: 38px;
+  }
+}
+
+.userEmail {
+  &::before {
+    content: "email(";
+    color: @lightColor;
+    font-size: 38px;
+  }
+}
+
+.pubReleaseInfo {
+  &::before {
+    content: "发布源(";
+    color: @lightColor;
+    font-size: 38px;
+  }
+}
+
+.subReleaseInfo {
+  &::before {
+    content: "订阅源(";
+    color: @lightColor;
+    font-size: 38px;
+  }
+}
+
+.updateTime {
+  &::before {
+    content: "最近更新(";
+    color: @lightColor;
+    font-size: 38px;
+  }
+}
+
+.userInfoBtn {
+  width: 400px;
+  height: 100px;
+  border: 8px solid #f87e7e;
+  border-radius: 24px;
+  color: #fd6666;
+  letter-spacing: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 42px;
+
+  &.fullfillBtn {
+    color: #fafafa;
+    background-color: #fd6666;
+    border: 8px solid #fd6666;
+  }
+}

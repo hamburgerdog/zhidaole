@@ -1,0 +1,64 @@
+@mainFontColor: #234d74;
+
+image {
+  height: inherit;
+  width: inherit;
+}
+
+.headerX {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .userPicX {
+    margin-bottom: 28px;
+    overflow: hidden;
+    height: 176px;
+    width: 176px;
+    border-radius: 100%;
+    border: 8px solid @mainFontColor;
+    background-color: #fff;
+  }
+
+  .userNameX {
+    color: @mainFontColor;
+    font-size: 72px;
+    font-weight: 500;
+  }
+}
+
+.mainX {
+  padding: 0;
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.settingItemX {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+  padding: 24px 90px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 32px 0px 0px 32px;
+
+  .itemLeftIconX {
+    height: 48px;
+    width: 48px;
+  }
+
+  .itemRightIconX {
+    height: 36px;
+    width: 24px;
+  }
+
+  .itemLabelX {
+    color: @mainFontColor;
+    font-size: 36px;
+    flex-grow: 1;
+    padding: 0 36px;
+  }
+}

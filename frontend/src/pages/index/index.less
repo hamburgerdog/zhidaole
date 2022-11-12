@@ -1,0 +1,136 @@
+.homeHeaderx {
+  padding: 40px 48px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  .headerInfox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+
+    .infoContent {
+      min-width: 300px;
+      font-size: 48px;
+      color: #234d74;
+      font-weight: 500;
+    }
+
+    .infoPicWrapX {
+      flex-grow: 1;
+      margin-left: 60px;
+
+      .infoPicX {
+        overflow: hidden;
+        height: 128px;
+        width: 128px;
+        border-radius: 100%;
+        border: 8px solid #234d74;
+
+        .infoPic {
+          cursor: pointer;
+          width: inherit;
+          height: inherit;
+        }
+      }
+    }
+  }
+
+  .headerBottomx {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+
+    .hbx {
+      width: 300px;
+      height: 360px;
+      border-radius: 32px;
+      padding: 24px 16px;
+      box-sizing: border-box;
+
+      &.subx {
+        background: linear-gradient(
+          180deg,
+          #50abfe 0%,
+          rgba(46, 141, 228, 0.9) 100%
+        );
+
+        .hbTitle {
+          font-size: 36px;
+          color: white;
+          font-weight: 500;
+          letter-spacing: 4rpx;
+        }
+
+        .hbContent {
+          color: rgba(255, 255, 255, 0.5);
+          font-size: 28px;
+          margin-top: 18px;
+
+          text {
+            margin-bottom: 18px;
+          }
+        }
+      }
+
+      &.pubx {
+        background: #fff;
+
+        box-shadow: 8px 8px 20px 2px rgba(0, 0, 0, 0.1);
+
+        .pbBarPicx {
+          height: 100px;
+          width: 240px;
+
+          .pbBar {
+            width: inherit;
+            height: inherit;
+          }
+        }
+
+        .pbTitle {
+          font-size: 36px;
+          color: #4286c5;
+          font-weight: 500;
+        }
+
+        .pbContentTitle {
+          font-size: 26px;
+          color: #5eb1fd;
+          font-weight: 500;
+        }
+
+        .pbContent {
+          color: rgba(#4286c5, 0.5);
+          font-size: 20px;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}
+
+.mainX {
+  padding: 28px 48px;
+
+  .mainBtnX {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #b7b7b7;
+    padding-bottom: 16px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+
+    .mainBtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 80px;
+      background: #ffffff;
+      box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1);
+      border-radius: 24px;
+    }
+  }
+}

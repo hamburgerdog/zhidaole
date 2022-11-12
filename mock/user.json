@@ -1,0 +1,132 @@
+[
+  {
+    "userName": "xjosiah0",
+    "password": "123456",
+    "email": "xjosiah0@xj.com",
+    "subscribedSourcesIDs": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    "ownReleaseMessageIDs": ["0"]
+  },
+  {
+    "userName": "xjosiah1",
+    "password": "123456",
+    "email": "xjosiah1@xj.com",
+    "subscribedSourcesIDs": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    "ownReleaseMessageIDs": ["1"]
+  },
+  {
+    "userName": "xjosiah2",
+    "password": "123456",
+    "email": "xjosiah2@xj.com",
+    "subscribedSourcesIDs": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    "ownReleaseMessageIDs": ["2"]
+  },
+  {
+    "userName": "xjosiah3",
+    "password": "123456",
+    "email": "xjosiah3@xj.com",
+    "subscribedSourcesIDs": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    "ownReleaseMessageIDs": ["3"]
+  },
+  {
+    "userName": "xjosiah4",
+    "password": "123456",
+    "email": "xjosiah4@xj.com",
+    "subscribedSourcesIDs": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    "ownReleaseMessageIDs": ["4"]
+  },
+  {
+    "userName": "xjosiah5",
+    "password": "123456",
+    "email": "xjosiah5@xj.com",
+    "subscribedSourcesIDs": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    "ownReleaseMessageIDs": ["5"]
+  },
+  {
+    "userName": "xjosiah6",
+    "password": "123456",
+    "email": "xjosiah6@xj.com",
+    "subscribedSourcesIDs": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    "ownReleaseMessageIDs": ["6"]
+  },
+  {
+    "userName": "xjosiah7",
+    "password": "123456",
+    "email": "xjosiah7@xj.com",
+    "subscribedSourcesIDs": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    "ownReleaseMessageIDs": ["7"]
+  },
+  {
+    "userName": "xjosiah8",
+    "password": "123456",
+    "email": "xjosiah8@xj.com",
+    "subscribedSourcesIDs": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    "ownReleaseMessageIDs": ["8"]
+  },
+  {
+    "userName": "xjosiah9",
+    "password": "123456",
+    "email": "xjosiah9@xj.com",
+    "subscribedSourcesIDs": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    "ownReleaseMessageIDs": ["9"]
+  },
+  {
+    "userName": "xjosiah10",
+    "password": "123456",
+    "email": "xjosiah010xj.com",
+    "subscribedSourcesIDs": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    "ownReleaseMessageIDs": ["10"]
+  },
+  {
+    "userName": "xjosiah11",
+    "password": "123456",
+    "email": "xjosiah011xj.com",
+    "subscribedSourcesIDs": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    "ownReleaseMessageIDs": ["11"]
+  },
+  {
+    "userName": "xjosiah12",
+    "password": "123456",
+    "email": "xjosiah012xj.com",
+    "subscribedSourcesIDs": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    "ownReleaseMessageIDs": ["12"]
+  },
+  {
+    "userName": "xjosiah13",
+    "password": "123456",
+    "email": "xjosiah013xj.com",
+    "subscribedSourcesIDs": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    "ownReleaseMessageIDs": ["13"]
+  },
+  {
+    "userName": "xjosiah14",
+    "password": "123456",
+    "email": "xjosiah014xj.com",
+    "subscribedSourcesIDs": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    "ownReleaseMessageIDs": ["14"]
+  }
+]
+{
+  $jsonSchema: {
+    required: [
+      'userName',
+      'password'
+    ],
+    properties: {
+      userName: {
+        bsonType: 'string'
+      },
+      password: {
+        bsonType: 'string'
+      },
+      email: {
+        bsonType: 'string'
+      },
+      subscribedSourcesIDs: {
+        bsonType: 'array'
+      },
+      ownReleaseMessageIDs: {
+        bsonType: 'array'
+      }
+    }
+  }
+}

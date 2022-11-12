@@ -1,0 +1,91 @@
+@mainColor: #234d74;
+@contentColor: #50abfe;
+
+.headerX {
+  position: fixed;
+  height: 290px !important;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+
+  .backIconX {
+    position: absolute;
+    top: 30%;
+  }
+
+  .title {
+    font-size: 40px !important;
+    padding: 16px 0;
+  }
+}
+.mainX {
+  padding-top: 300px !important;
+  padding-bottom: 140px !important;
+}
+
+.contentWrapX {
+  background: #ffffff;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  padding: 16px;
+
+  .cardTitleX {
+    font-size: 36px;
+    line-height: 74px;
+    border-bottom: 4px solid #bababa;
+    font-weight: 500;
+    color: @mainColor;
+  }
+
+  .cardContentX {
+    display: flex;
+    line-height: 54px;
+
+    .labelX {
+      color: @mainColor;
+    }
+    .contentX {
+      color: @contentColor;
+    }
+  }
+
+  .cardTimeX {
+    padding-right: 36px;
+    color: #e5e5e5;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: right;
+  }
+}
+
+.filterBtnX {
+  margin-top: 36px;
+  display: flex;
+  justify-content: space-between;
+  color: #bababa;
+  font-size: 36px;
+
+  & .highLightBtn {
+    color: #4e96d9;
+  }
+}
+
+.detailButtonX {
+  position: fixed;
+  bottom: 0;
+  height: 140px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+
+  .add_btn_wrap_x {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    border-radius: 120px;
+    height: 80px;
+    width: 360px;
+  }
+}
